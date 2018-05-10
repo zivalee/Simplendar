@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:shrinkColumns="0"
+    android:background="#000000">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Add daily calorie"
+        android:textColor="#ffffff"
+        android:textSize="40dp"
+        android:background="#c63300"
+        android:gravity="center"
+        android:id="@+id/add"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/add"
+        android:text="Date"
+        android:textColor="#ffffff"
+        android:textSize="40dp"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/edit1"
+        android:layout_marginStart="11dp"
+        android:text="Calorie"
+        android:textColor="#ffbb66"
+        android:textSize="40dp"
+        android:layout_marginLeft="11dp"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="225dp"
+        android:layout_height="55dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="173dp"
+        android:background="#aaaaaa"
+        android:inputType="number"
+        tools:ignore="RtlCompat" />
+    <Button
+        android:id="@+id/butt1"
+        android:layout_width="203dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Enter"
+        android:textSize="30dp" />
+
+
+
+
+
+</RelativeLayout>

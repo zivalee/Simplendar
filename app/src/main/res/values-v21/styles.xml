@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Material.dark" parent="android:Theme.Material" >
+        <item name="android:colorAccent">@color/accent_material_dark</item>
+    </style>
+
+    <style name="material_pink" parent="android:Theme.Material" >
+        <item name="android:colorAccent">@color/accent_material_dark_1</item>
+    </style>
+</resources>
