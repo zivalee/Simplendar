@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -8,36 +9,59 @@
     android:orientation="vertical"
     android:gravity="center">
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/baseline_add_white_18dp"
+        app:backgroundTint="@color/colorPrimary" />
+
+    <include
+        android:id="@+id/appbar"
+        layout="@layout/toolbar">
+
+    </include>
+
     <TextView
         android:id="@+id/ytext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/mtext"
+        android:layout_centerHorizontal="true"
         android:text="2018"
-        android:textSize="24sp"
         android:textColor="#ffffff"
-
-        />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/mtext"
         android:layout_width="240dp"
         android:layout_height="50dp"
-        android:text="April"
-        android:textSize="32sp"
-        android:textColor="#F0F0F0"
+        android:layout_above="@+id/dtext"
+        android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:background="#ffff4d67"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:text="April"
+        android:textColor="#F0F0F0"
+        android:textSize="32sp" />
 
     <TextView
         android:id="@+id/dtext"
         android:layout_width="240dp"
         android:layout_height="200dp"
-        android:text="20"
-        android:textSize="60sp"
-        android:textColor="#ffff4d67"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="159dp"
         android:background="#F0F0F0"
-        android:gravity="center" />
+        android:gravity="center"
+        android:text="20"
+        android:textColor="#ffff4d67"
+        android:textSize="60sp" />
 
     <TextView
         android:id="@+id/daytext"
@@ -53,9 +77,9 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Select Date"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginBottom="82dp"
+        android:text="Select Date" />
 
-</LinearLayout>
+</RelativeLayout>

@@ -8,4 +8,5 @@
     <style name="material_pink" parent="android:Theme.Material" >
         <item name="android:colorAccent">@color/accent_material_dark_1</item>
     </style>
+
 </resources>

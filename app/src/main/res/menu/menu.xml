@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/calorie"
+        android:title="@string/calorie"
+        app:showAsAction = "never"/>
+
+    <item
+        android:id="@+id/money"
+        android:title="@string/money"
+        app:showAsAction = "never"/>
+
+    <item
+        android:id="@+id/water"
+        android:title="@string/water"
+        app:showAsAction = "never"/>
+
+    <item
+        android:id="@+id/idea"
+        android:title="@string/idea"
+        app:showAsAction = "never"/>
+
+
+</menu>
