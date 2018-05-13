@@ -1,6 +1,8 @@
 package com.example.ziva.myapplication;
 
+import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.icu.text.DateFormat;
 import android.icu.text.SimpleDateFormat;
 import android.os.Build;
@@ -14,8 +16,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.ImageButton;
 import android.widget.TextView;
-
 import java.util.Calendar;
 
 @RequiresApi(api = Build.VERSION_CODES.N)
@@ -25,10 +27,12 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView ytag, mtag, dtag, daytag;
     private Button gotoc;
+    private ImageButton add;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
     DateFormat formatDateTime = DateFormat.getDateTimeInstance();
     Calendar dateTime = Calendar.getInstance();
 
+    @SuppressLint("WrongViewCast")
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,19 +40,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.appbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Simplendar");
         ytag = (TextView) findViewById(R.id.ytext);
         mtag = (TextView) findViewById(R.id.mtext);
         dtag = (TextView) findViewById(R.id.dtext);
         daytag = (TextView) findViewById(R.id.daytext);
         gotoc = (Button) findViewById(R.id.button);
+        add = findViewById(R.id.add);
 
 
-            gotoc.setOnClickListener(new View.OnClickListener() {
+        gotoc.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     updateDate();
                 }
             });
+
 
         Calendar cal = Calendar.getInstance();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MMMM/d/E"); // Set your locale!
@@ -64,6 +71,11 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+    public void openadd(View view){
+        Intent intent = new Intent(this, add.class);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -73,6 +85,26 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.calorie:
+                Intent calorie = new Intent(this, calorie.class);
+                startActivity(calorie);
+                break;
+            case R.id.expense:
+                Intent expense = new Intent(this, expense.class);
+                startActivity(expense);
+                break;
+            case R.id.water:
+                Intent water = new Intent(this, water.class);
+                startActivity(water);
+                break;
+            case R.id.idea:
+                Intent idea = new Intent(this, idea.class);
+                startActivity(idea);
+                break;
+
+
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -101,29 +133,3 @@ public class MainActivity extends AppCompatActivity {
                 daytag.setText(values[3]);
         }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

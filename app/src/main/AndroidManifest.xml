@@ -6,10 +6,11 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        android:theme="@style/dark">
+        <activity
+            android:name=".MainActivity"
             android:theme="@style/dark">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,6 +18,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".add"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".add_calorie"
+            android:parentActivityName=".add" />
+        <activity
+            android:name=".add_expense"
+            android:parentActivityName=".add" />
+        <activity
+            android:name=".add_water"
+            android:parentActivityName=".add" />
+        <activity
+            android:name=".add_idea"
+            android:parentActivityName=".add" />
+        <activity
+            android:name=".calorie"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".idea"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".water"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".expense"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>

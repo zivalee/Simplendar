@@ -8,7 +8,7 @@
         app:showAsAction = "never"/>
 
     <item
-        android:id="@+id/money"
+        android:id="@+id/expense"
         android:title="@string/money"
         app:showAsAction = "never"/>
 

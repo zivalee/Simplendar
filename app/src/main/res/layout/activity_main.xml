@@ -9,30 +9,18 @@
     android:orientation="vertical"
     android:gravity="center">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_gravity="bottom|end"
-        android:layout_marginBottom="12dp"
-        android:layout_marginEnd="12dp"
-        android:src="@drawable/baseline_add_white_18dp"
-        app:backgroundTint="@color/colorPrimary" />
-
     <include
         android:id="@+id/appbar"
         layout="@layout/toolbar">
-
     </include>
 
     <TextView
         android:id="@+id/ytext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/mtext"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="112dp"
         android:text="2018"
         android:textColor="#ffffff"
         android:textSize="24sp" />
@@ -41,7 +29,7 @@
         android:id="@+id/mtext"
         android:layout_width="240dp"
         android:layout_height="50dp"
-        android:layout_above="@+id/dtext"
+        android:layout_below="@+id/ytext"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:background="#ffff4d67"
@@ -54,9 +42,8 @@
         android:id="@+id/dtext"
         android:layout_width="240dp"
         android:layout_height="200dp"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/mtext"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="159dp"
         android:background="#F0F0F0"
         android:gravity="center"
         android:text="20"
@@ -79,7 +66,21 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="82dp"
+        android:layout_marginBottom="110dp"
         android:text="Select Date" />
+
+    <ImageButton
+        android:id="@+id/add"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/roundbutton"
+        android:onClick="openadd"
+        android:src="@drawable/baseline_add_white_18dp"
+        android:layout_marginRight="12dp"
+        android:layout_alignParentRight="true" />
 
 </RelativeLayout>
