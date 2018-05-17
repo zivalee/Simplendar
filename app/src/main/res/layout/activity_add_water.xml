@@ -5,9 +5,100 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".add_water">
+
     <include
         android:id="@+id/appbar"
         layout="@layout/toolbar">
     </include>
 
+    <TextView
+        android:id="@+id/ed_date1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="50dp"
+        android:text="日期"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#1e90ff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/ed_date2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_date1"
+        tools:ignore="DuplicateIds,NotSibling" />
+
+    <TextView
+        android:id="@+id/ed_info1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="50dp"
+        android:text="說明"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#1e90ff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_date2" />
+
+    <EditText
+        android:id="@+id/ed_info2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_info1"
+        tools:ignore="DuplicateIds,MissingConstraints,NotSibling,UnknownId" />
+
+    <TextView
+        android:id="@+id/ed_amount1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="58dp"
+        android:text="水量"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#1e90ff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_info2"
+        tools:ignore="DuplicateIds,MissingConstraints" />
+
+    <EditText
+        android:id="@+id/ed_amount2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="134dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_amount"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="DuplicateIds,NotSibling,UnknownId" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="278dp"
+        android:layout_marginStart="278dp"
+        android:layout_marginTop="420dp"
+        android:text="新增"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
