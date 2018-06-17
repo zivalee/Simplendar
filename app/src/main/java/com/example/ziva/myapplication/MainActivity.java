@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private DatePickerDialog.OnDateSetListener mDateSetListener;
     DateFormat formatDateTime = DateFormat.getDateTimeInstance();
     Calendar dateTime = Calendar.getInstance();
+    private static String strDate;
 
     @SuppressLint("WrongViewCast")
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
         Calendar cal = Calendar.getInstance();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MMMM/d/E"); // Set your locale!
-        String strDate = sdf.format(cal.getTime());
+        strDate = sdf.format(cal.getTime());
 
         String[] values = strDate.split("/", 0);
 
@@ -67,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
         mtag.setText(values[1]);
         dtag.setText(values[2]);
         daytag.setText(values[3]);
-
 
         }
 
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
             case R.id.calorie:
-                Intent calorie = new Intent(this, calorie.class);
+                Intent calorie = new Intent(this, view_calorie.class);
                 startActivity(calorie);
                 break;
             case R.id.expense:
@@ -102,8 +102,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent idea = new Intent(this, idea.class);
                 startActivity(idea);
                 break;
-
-
         }
         return super.onOptionsItemSelected(item);
     }
@@ -119,17 +117,26 @@ public class MainActivity extends AppCompatActivity {
                 dateTime.set(Calendar.MONTH, monthOfYear);
                 dateTime.set(Calendar.DAY_OF_MONTH, dayOfMonth);
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MMMM/d/E"); // Set your locale!
-                String strDate = sdf.format(dateTime.getTime());
+                strDate = sdf.format(dateTime.getTime());
                 String[] values = strDate.split("/", 0);
                 updateTextLabel(values);
+
+//                Intent i = new Intent(MainActivity.this, add_calorie.class);
+//                i.putExtra("c",strDate);
+//                startActivity(i);
             }
         };
 
+    public static String getdata() {
+        return strDate;
+    }
 
-        private void updateTextLabel(String[] values){
+
+    private void updateTextLabel(String[] values){
             ytag.setText(values[0]);
-                mtag.setText(values[1]);
-                dtag.setText(values[2]);
-                daytag.setText(values[3]);
+            mtag.setText(values[1]);
+            dtag.setText(values[2]);
+            daytag.setText(values[3]);
         }
+
 }

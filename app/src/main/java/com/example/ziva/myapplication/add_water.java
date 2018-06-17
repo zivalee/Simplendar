@@ -9,7 +9,7 @@ import android.widget.EditText;
 
 public class add_water extends AppCompatActivity {
 
-    private EditText edDate2;
+
     private EditText edInfo2;
     private EditText edAmount2;
     @Override
@@ -26,9 +26,8 @@ public class add_water extends AppCompatActivity {
 
     }
     private void findViews() {
-        edDate2 = (EditText) findViewById(R.id.ed_date2);
-        edInfo2 = (EditText) findViewById(R.id.ed_info2);
-        edAmount2 = (EditText) findViewById(R.id.ed_amount2);
+        edInfo2 = (EditText) findViewById(R.id.ed_info);
+        edAmount2 = (EditText) findViewById(R.id.ed_amount);
     }
 }
 

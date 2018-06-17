@@ -34,7 +34,7 @@
             android:name=".add_idea"
             android:parentActivityName=".add" />
         <activity
-            android:name=".calorie"
+            android:name=".view_calorie"
             android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".idea"
