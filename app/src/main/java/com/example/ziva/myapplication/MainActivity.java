@@ -91,15 +91,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(calorie);
                 break;
             case R.id.expense:
-                Intent expense = new Intent(this, expense.class);
+                Intent expense = new Intent(this, view_expense.class);
                 startActivity(expense);
                 break;
             case R.id.water:
-                Intent water = new Intent(this, water.class);
+                Intent water = new Intent(this, view_water.class);
                 startActivity(water);
                 break;
             case R.id.idea:
-                Intent idea = new Intent(this, idea.class);
+                Intent idea = new Intent(this, view_idea.class);
                 startActivity(idea);
                 break;
         }

@@ -15,38 +15,55 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/appbar"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginStart="32dp"
         android:text="Ideas"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#ffd700"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar"
+        android:layout_alignParentLeft="true"
+        />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="16dp"
-        android:text="Enter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText7" />
+
 
     <EditText
         android:id="@+id/editText7"
         android:layout_width="300dp"
-        android:layout_height="228dp"
+        android:layout_height="250dp"
         android:layout_marginLeft="32dp"
         android:layout_marginStart="32dp"
         android:background="#FFFFFF"
         android:bottomLeftRadius="2dp"
         android:bottomRightRadius="2dp"
-        android:inputType="textPersonName"
+        android:inputType="textLongMessage"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="RtlCompat" />
+        tools:ignore="RtlCompat,UnknownId" />
 
-    </android.support.constraint.ConstraintLayout>
+    <Button
+    android:id="@+id/button"
+    android:layout_width="117dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="38dp"
+    android:layout_marginRight="38dp"
+    android:layout_marginTop="25dp"
+    android:text="Enter"
+    android:textSize="20dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/editText7" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:layout_marginLeft="147dp"
+        android:layout_marginStart="147dp"
+        android:text="delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>

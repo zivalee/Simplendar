@@ -1,6 +1,7 @@
 package com.example.ziva.myapplication;
 
 import android.app.Notification;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
@@ -22,6 +23,8 @@ public class add_calorie extends AppCompatActivity {
     private EditText Edit1;
     private Button Butt1;
     public CalorieSQL DH;
+    private Button button2;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +42,8 @@ public class add_calorie extends AppCompatActivity {
         Edititem=(EditText)findViewById(R.id.edititem);
         Edit1=(EditText)findViewById(R.id.edit1);
         Butt1=(Button)findViewById(R.id.butt1);
+        button2=(Button)findViewById(R.id.button2);
         AddData();
-
 
     }
 
@@ -86,6 +89,4 @@ public class add_calorie extends AppCompatActivity {
         });
 
     }
-
-    }
-
+}

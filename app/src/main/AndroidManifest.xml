@@ -37,14 +37,14 @@
             android:name=".view_calorie"
             android:parentActivityName=".MainActivity"/>
         <activity
-            android:name=".idea"
+            android:name=".view_expense"
             android:parentActivityName=".MainActivity"/>
         <activity
-            android:name=".water"
+            android:name=".view_water"
             android:parentActivityName=".MainActivity"/>
         <activity
-            android:name=".expense"
-            android:parentActivityName=".MainActivity"></activity>
+            android:name=".view_idea"
+            android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>

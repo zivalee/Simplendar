@@ -5,6 +5,8 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 import java.util.ArrayList;
@@ -17,6 +19,7 @@ public class view_calorie extends AppCompatActivity {
     ArrayList<Calorie> CList;
     ListView listView;
     Calorie C;
+    private Button button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,8 @@ public class view_calorie extends AppCompatActivity {
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
         DH = new CalorieSQL(this);
+
+        button2=(Button)findViewById(R.id.button2);
         getdata();
 
     }

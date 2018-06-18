@@ -1,88 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:shrinkColumns="0"
-    android:background="#000000">
+    >
 
     <include
         android:id="@+id/appbar"
         layout="@layout/toolbar">
     </include>
 
-    <TextView
-        android:id="@+id/text1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#003377"
-        android:text="Add an account"
-        android:textColor="#ffffff"
-        android:textSize="30dp"
-        android:gravity="center"
-        />
+
 
 
     <TextView
         android:id="@+id/text3"
-        android:layout_width="139dp"
-        android:layout_height="45dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/edit2"
-        android:layout_marginTop="74dp"
-
-        android:gravity="left"
-        android:text="income"
-        android:textColor="#ff8888"
-        android:textSize="35dp"
-        android:layout_alignLeft="@+id/edit2" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/appbar"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:text="Income"
+        android:textColor="#99ff33"
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar"
+        android:layout_alignParentLeft="true"
+        />
 
     <EditText
-        android:id="@+id/edit2"
-        android:layout_width="280dp"
-        android:layout_height="55dp"
-
-
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/text4"
-        android:layout_marginTop="151dp"
-        android:background="#aaaaaa"
-        android:layout_alignLeft="@+id/text4" />
+        android:id="@+id/editincome"
+        android:layout_width="300dp"
+        android:layout_height="64dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:background="#ffffff"
+        android:bottomLeftRadius="2dp"
+        android:bottomRightRadius="2dp"
+        android:inputType="number"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text3"
+        tools:ignore="RtlCompat,UnknownId"
+        />
 
     <TextView
         android:id="@+id/text4"
-        android:layout_width="139dp"
-        android:layout_height="45dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="221dp"
-        android:gravity="left"
-        android:text="expense"
-        android:textColor="#5599ff"
-        android:textSize="35dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="22dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Expense"
+        android:textColor="#227700"
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editincome"
+        />
 
     <EditText
         android:id="@+id/edit3"
-        android:layout_width="280dp"
-        android:layout_height="55dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/text3"
-        android:layout_marginBottom="153dp"
-        android:background="#aaaaaa"
-        android:layout_alignLeft="@+id/text3" />
+        android:layout_width="300dp"
+        android:layout_height="64dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:background="#FFFFFF"
+        android:bottomLeftRadius="2dp"
+        android:bottomRightRadius="2dp"
+        android:inputType="number"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text4"
+        tools:ignore="RtlCompat"/>
 
     <Button
         android:id="@+id/butt1"
-        android:layout_width="203dp"
+        android:layout_width="117dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="38dp"
+        android:layout_marginRight="38dp"
+        android:layout_marginTop="25dp"
         android:text="Enter"
-        android:textSize="30dp" />
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit3"
+        />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="82dp"
+        android:layout_marginLeft="147dp"
+        android:layout_marginStart="147dp"
+        android:text="delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
