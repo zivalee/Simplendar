@@ -74,6 +74,15 @@ public class CalorieSQL extends SQLiteOpenHelper
         return data;
     }
 
+    public void delete()
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TB,null,null);
+        db.execSQL("delete from "+ TB);
+//        db.execSQL("TRUNCATE table " + TB);
+        db.close();
+    }
+
 
 
 }

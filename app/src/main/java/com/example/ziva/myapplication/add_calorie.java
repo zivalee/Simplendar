@@ -44,6 +44,7 @@ public class add_calorie extends AppCompatActivity {
         Butt1=(Button)findViewById(R.id.butt1);
         button2=(Button)findViewById(R.id.button2);
         AddData();
+        delete();
 
     }
 
@@ -88,5 +89,19 @@ public class add_calorie extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void delete(){
+
+        button2.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                {
+                    DH.delete();
+                    Toast.makeText(add_calorie.this,"ALL DELETED!",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
     }
 }
